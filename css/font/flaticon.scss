@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?cc85a30f613e79d046536741339b0d32") format("truetype"),
+url("./flaticon.woff?cc85a30f613e79d046536741339b0d32") format("woff"),
+url("./flaticon.woff2?cc85a30f613e79d046536741339b0d32") format("woff2"),
+url("./flaticon.eot?cc85a30f613e79d046536741339b0d32#iefix") format("embedded-opentype"),
+url("./flaticon.svg?cc85a30f613e79d046536741339b0d32#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "heart": "\f101",
+    "globe": "\f102",
+    "compass": "\f103",
+    "pointer": "\f104",
+);
+
+.flaticon-heart:before {
+    content: map-get($flaticon-map, "heart");
+}
+.flaticon-globe:before {
+    content: map-get($flaticon-map, "globe");
+}
+.flaticon-compass:before {
+    content: map-get($flaticon-map, "compass");
+}
+.flaticon-pointer:before {
+    content: map-get($flaticon-map, "pointer");
+}

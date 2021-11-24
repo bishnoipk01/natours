@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @include responsive(tab-land) {
+    font-size: 56.25%; // 1rem == 9px
+  }
+  @include responsive(tab-port) {
+    font-size: 50%; // 1 rem == 8px
+  }
+  @include responsive(big-desktop) {
+    font-size: 75%; // 1rem == 12px
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
